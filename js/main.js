@@ -1,0 +1,1 @@
+import 'folder/script.js'
