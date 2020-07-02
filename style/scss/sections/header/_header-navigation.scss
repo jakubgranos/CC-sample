@@ -1,0 +1,58 @@
+.header-navigation {
+  $navigation: &;
+  display: flex;
+  flex-direction: row;
+  
+  & li {
+    position: relative;
+    font-size: 25px;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0 0px 0px 77px;
+
+    & a {
+      margin: 0 0px 5px 0px;
+      display: block;
+    }
+
+    &:hover {
+      #{$navigation}-dropdown {
+        transition: 0.5s;
+        visibility: unset;
+        min-width: 170px;
+        height: auto;
+        padding: 20px;
+        left: -30px;
+        background: $color-alto;
+        position: absolute;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+        border-radius: 7px;
+
+        & li {
+          &:hover {
+            transition: 0.4s;
+            border-bottom: 1px solid $color-black;
+          }
+        }
+      }
+    }
+  }
+  
+  &-dropdown {
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+
+    & li {
+      text-align: center;
+      margin: 0 0 5px 0;
+      border-bottom: 1px solid transparent;
+
+      & a {
+        margin: 0;  
+      }
+    }
+  }
+}
