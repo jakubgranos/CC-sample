@@ -1,5 +1,10 @@
 body {
   font-family: $font_open_sans;
+  position: relative;
+}
+
+.body-toggle-scroll {
+  overflow: hidden;
 }
 
 .container {
