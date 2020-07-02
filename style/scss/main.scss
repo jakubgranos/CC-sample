@@ -1,6 +1,6 @@
-//import all scss stuff
+//import helpers
+@import 'helpers/heplers.scss';
 
-@import 'helpers/breakpoints';
-@import 'helpers/colors';
-@import 'helpers/fonts';
-@import 'helpers/reset';
+
+//sections
+@import 'sections/sections.scss'
