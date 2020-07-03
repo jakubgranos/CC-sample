@@ -14,15 +14,29 @@
   &-text {
     padding: 0 0 160px 0;
     min-width: 495px;
+
+    @include media('<lg') {
+      min-width: 100%;
+      text-align: center;
+    }
     
     &-under {
       margin: 14px 0 0 0;
       display: flex;
       flex-direction: row;
 
+      @include media('<lg') {
+        justify-content: center;
+        flex-direction: column;
+      }
+
       & p {
         font-size: 21px;
         margin: 5px 45px 0 0;
+
+        @include media('<lg') {
+          margin: 5px 0px 10px 0;
+        }
       }
 
       & button {
@@ -30,6 +44,11 @@
         border: 3px solid $color-white;
         color: $color-white;
         transition: 0.2s all;
+
+        @include media('<lg') {
+          max-width: 250px;
+          margin: 0 auto;
+        }
 
         &:hover {
           background: $color-cutty-shark;

@@ -2,6 +2,15 @@
   $navigation: &;
   display: flex;
   flex-direction: row;
+
+  @include media('<lg') {
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    height: 100vh;
+    background: $color-nevada;
+    padding: 30px;
+  }
   
   & li {
     position: relative;
@@ -11,6 +20,12 @@
     font-weight: bolder;
     text-align: center;
     margin: 0 0px 0px 77px;
+
+    @include media('<lg') {
+      min-width: 170px;
+      margin: 0;
+      background: $color-cutty-shark;
+    }
 
     & a {
       margin: 0 0px 5px 0px;
@@ -30,11 +45,22 @@
         box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
         border-radius: 7px;
 
-        & li {
-          &:hover {
-            transition: 0.4s;
-            border-bottom: 1px solid $color-black;
-          }
+        @include media('<lg') {
+          display: block;
+          position: unset;
+          width: 100%;
+          box-shadow: unset;
+          background: unset;
+          padding: unset;
+        }
+      }
+
+      #{$navigation}-dropdown li:hover {
+        transition: 0.4s;
+        border-bottom: 1px solid $color-black;
+
+        @include media('<lg') {
+          border-bottom: none;
         }
       }
     }
@@ -45,14 +71,31 @@
     width: 0px;
     visibility: hidden;
 
+    @include media('<lg') {
+      height: auto;
+      width: auto;
+      display: none
+    }
+
     & li {
       text-align: center;
       margin: 0 0 5px 0;
       border-bottom: 1px solid transparent;
-
+      
+      @include media('<lg') {
+        background: $color-white;
+        border-bottom: unset;
+      }
+      
       & a {
         margin: 0;  
       }
     }
+  }
+
+  &-active {
+    display: block;
+    top: 0;
+    right: 0;
   }
 }

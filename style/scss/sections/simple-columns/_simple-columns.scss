@@ -1,14 +1,26 @@
 .simple-columns {
   padding: 35px 0 62px 0;
 
+  @include media('<lg') {
+    text-align: center;
+  }
+
   &-text {
     display: flex;
     flex-direction: row;
+
+    @include media('<lg') {
+      flex-direction: column;
+    }
   }
 }
 
 .column {
   padding: 30px 44px 0 0;
+
+  @include media('<lg') {
+    padding: 0px;
+  }
 
   & p {
     letter-spacing: 0.18px;

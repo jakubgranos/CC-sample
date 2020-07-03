@@ -11,5 +11,11 @@
     height: 403px;
     margin: 0 0 40px 0;
     cursor: pointer;
+    object-fit: cover;
+
+    @include media('<lg') {
+      width: 300px;
+      height: 300px;
+    }
   }
 }
