@@ -28,7 +28,6 @@ class Lightbox {
   }
 
   renderImage(targetImage, targetParent) {
-    //check src of img on server (you get absolute src path)
     const newImage = document.createElement('img');
     newImage.src = targetImage.src;
     newImage.alt = targetImage.alt
