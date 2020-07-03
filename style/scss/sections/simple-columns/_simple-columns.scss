@@ -1,0 +1,17 @@
+.simple-columns {
+  padding: 35px 0 35px 0;
+
+  &-text {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.column {
+  padding: 30px 44px 0 0;
+
+  & p {
+    letter-spacing: 0.18px;
+    line-height: 28px;
+  }
+}
