@@ -10,4 +10,8 @@ body {
 .container {
   max-width: 1150px;
   margin: 0 auto;
+
+  @include media('<lg') {
+    margin: 0 15px 0 15px;
+  }
 }

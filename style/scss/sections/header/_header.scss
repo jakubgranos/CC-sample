@@ -9,9 +9,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include media('<lg') {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &-logo {
     text-transform: capitalize;
+
+    @include media('<lg') {
+      width: 100%;
+      text-align: center;
+    }
   }
 }

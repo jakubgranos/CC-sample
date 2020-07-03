@@ -10,7 +10,8 @@
   flex-direction: column;
 
   & img {
-    max-height: 700px;
+    max-width: 100%;
+    max-height: calc(100% - 100px);
   }
 
   &-button-container {
@@ -26,18 +27,7 @@
     border-radius: unset;
     position: relative;
 
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 48px;
-      height: 3px;
-      background: $color-black;
-      left: -7px;
-      top: 17px;
-      transform: rotate(-47deg);
-    }
-
+    &::after,
     &::before {
       content: '';
       display: block;
@@ -47,6 +37,15 @@
       background: $color-black;
       left: -7px;
       top: 17px;
+    }
+
+    &::after {
+      content: '';
+      transform: rotate(-47deg);
+    }
+
+    &::before {
+      content: '';
       transform: rotate(47deg);
     }
   }
