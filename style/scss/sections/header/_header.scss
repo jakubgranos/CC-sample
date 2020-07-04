@@ -18,10 +18,13 @@
 
   &-logo {
     text-transform: capitalize;
+    position: relative;
+    z-index: 4;
 
     @include media('<lg') {
       width: 100%;
       text-align: center;
+      padding: 20px 0 0 0;
     }
   }
 }

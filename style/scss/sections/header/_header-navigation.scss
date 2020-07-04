@@ -2,6 +2,8 @@
   $navigation: &;
   display: flex;
   flex-direction: row;
+  position: relative;
+  z-index: 4;
 
   @include media('<lg') {
     flex-direction: column;
